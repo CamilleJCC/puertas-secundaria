@@ -15,12 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealBtn = document.querySelector('.reveal-btn');
     const inputs = document.querySelectorAll('.magic-input');
     const plusIcon = document.querySelector('.plus-icon');
-    const overlay = document.getElementById('overlay');
-    const bioPopup = document.getElementById('bioPopup');
-    const transportPopup = document.getElementById('transportPopup');
-    const dreamPopup = document.getElementById('dreamPopup');
-    const closeButtons = document.querySelectorAll('.close-btn');
-        const plusIcon = document.querySelector('.plus-icon');
     const questionBtn = document.querySelector('.question-icon');
     const bioPopup = document.getElementById('bioPopup');
     const sabiasPopup = document.getElementById('questionPopup');
@@ -80,50 +74,31 @@ document.addEventListener('DOMContentLoaded', () => {
         return colors[Math.floor(Math.random() * colors.length)];
     }
 
-function showAnswerPopup(answer, index) {
-    overlay.style.display = 'block';
-    const popup = document.getElementById(`answer${index + 1}Popup`);
-    popup.querySelector('.answer-text').textContent = answer;
-    popup.style.display = 'block';
-    setTimeout(() => {
-        popup.classList.add('show');
-    }, 10);
-}
+    function showAnswerPopup(answer, index) {
+        overlay.style.display = 'block';
+        const popup = document.getElementById(`answer${index + 1}Popup`);
+        popup.querySelector('.answer-text').textContent = answer;
+        popup.style.display = 'block';
+        setTimeout(() => {
+            popup.classList.add('show');
+        }, 10);
+    }
 
-function handleReveal() {
-    inputs.forEach((input, index) => {
-        if (input.value.trim()) {
-            showAnswerPopup(input.value, index);
-        }
-    });
-}
-
-
-// Update the close functionality
-closeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const popup = button.parentElement;
-        if (popup.classList.contains('answer-popup')) {
-            popup.classList.remove('show');
-            setTimeout(() => {
-                popup.style.display = 'none';
-                overlay.style.display = 'none';
-            }, 500);
-        } else {
-            overlay.style.display = 'none';
-            popup.style.display = 'none';
-        }
-    });
-});
-
-
+    function handleReveal() {
+        inputs.forEach((input, index) => {
+            if (input.value.trim()) {
+                showAnswerPopup(input.value, index);
+            }
+        });
+    }
 
     // Event Listeners
     artwork.addEventListener('mousemove', updateZoom);
     artwork.addEventListener('mouseleave', () => {
         magnifier.style.display = 'none';
     });
-  // Plus icon opens bio
+
+    // Plus icon opens bio
     plusIcon.addEventListener('click', () => {
         overlay.style.display = 'block';
         bioPopup.style.display = 'block';
@@ -139,18 +114,27 @@ closeButtons.forEach(button => {
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
             const popup = button.closest('.popup');
-            overlay.style.display = 'none';
-            popup.style.display = 'none';
+            if (popup.classList.contains('answer-popup')) {
+                popup.classList.remove('show');
+                setTimeout(() => {
+                    popup.style.display = 'none';
+                    overlay.style.display = 'none';
+                }, 500);
+            } else {
+                overlay.style.display = 'none';
+                popup.style.display = 'none';
+            }
         });
     });
 
     // Close on overlay click
     overlay.addEventListener('click', () => {
-        bioPopup.style.display = 'none';
-        sabiasPopup.style.display = 'none';
+        const visiblePopups = document.querySelectorAll('.popup[style*="display: block"]');
+        visiblePopups.forEach(popup => {
+            popup.style.display = 'none';
+        });
         overlay.style.display = 'none';
     });
-
 
     revealBtn.addEventListener('click', handleReveal);
     
@@ -162,6 +146,8 @@ closeButtons.forEach(button => {
             }
         });
     });
+});
+
 });
 
 
