@@ -437,6 +437,12 @@ ul.dashed > li:before {
     width: 44%;
     height: fit-content;
 }
+.popup p {
+padding:20px;
+}
+#questionPopup {
+    background:#faf7ba;
+}
 
 /* Biography popup button */
 .bio-btn {
