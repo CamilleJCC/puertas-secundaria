@@ -20,6 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const transportPopup = document.getElementById('transportPopup');
     const dreamPopup = document.getElementById('dreamPopup');
     const closeButtons = document.querySelectorAll('.close-btn');
+        const plusIcon = document.querySelector('.plus-icon');
+    const questionBtn = document.querySelector('.question-icon');
+    const bioPopup = document.getElementById('bioPopup');
+    const sabiasPopup = document.getElementById('questionPopup');
+    const overlay = document.getElementById('overlay');
+    const closeButtons = document.querySelectorAll('.close-btn');
 
     function updateZoom(e) {
         const rect = artwork.getBoundingClientRect();
@@ -117,21 +123,32 @@ closeButtons.forEach(button => {
     artwork.addEventListener('mouseleave', () => {
         magnifier.style.display = 'none';
     });
-       questionBtn.addEventListener('click', () => {
+  // Plus icon opens bio
+    plusIcon.addEventListener('click', () => {
         overlay.style.display = 'block';
-        questionPopup.style.display = 'block';
+        bioPopup.style.display = 'block';
     });
 
-    overlay.addEventListener('click', () => {
-        overlay.style.display = 'none';
-        questionPopup.style.display = 'none';
+    // Question mark opens sabias que
+    questionBtn.addEventListener('click', () => {
+        overlay.style.display = 'block';
+        sabiasPopup.style.display = 'block';
     });
 
+    // Close functionality
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
+            const popup = button.closest('.popup');
             overlay.style.display = 'none';
-            questionPopup.style.display = 'none';
+            popup.style.display = 'none';
         });
+    });
+
+    // Close on overlay click
+    overlay.addEventListener('click', () => {
+        bioPopup.style.display = 'none';
+        sabiasPopup.style.display = 'none';
+        overlay.style.display = 'none';
     });
 
 
