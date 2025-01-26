@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const artwork = document.querySelector('.artwork');
     const revealBtn = document.querySelector('.reveal-btn');
     const inputs = document.querySelectorAll('.magic-input');
-    const plusIcon = document.querySelector('.plus-icon');
-    const questionBtn = document.querySelector('.question-icon');
+    const plusBtn = document.getElementById('plusBtn');
+    const questionBtn = document.getElementById('questionBtn');
     const bioPopup = document.getElementById('bioPopup');
-    const sabiasPopup = document.getElementById('questionPopup');
+    const questionPopup = document.getElementById('questionPopup');
     const overlay = document.getElementById('overlay');
     const closeButtons = document.querySelectorAll('.close-btn');
 
@@ -46,20 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createSparkles(element) {
         const rect = element.getBoundingClientRect();
-        
         for (let i = 0; i < 30; i++) {
             const sparkle = document.createElement('div');
             sparkle.className = 'sparkle';
-            
             const x = Math.random() * rect.width;
             const y = Math.random() * rect.height;
-            
             sparkle.style.left = x + 'px';
             sparkle.style.top = y + 'px';
             sparkle.style.backgroundColor = `hsl(${Math.random() * 360}, 50%, 50%)`;
-            
             element.appendChild(sparkle);
-            
             setTimeout(() => sparkle.remove(), 1500);
         }
     }
@@ -99,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Plus icon opens bio
-    plusIcon.addEventListener('click', () => {
+    plusBtn.addEventListener('click', () => {
         overlay.style.display = 'block';
         bioPopup.style.display = 'block';
     });
@@ -107,14 +102,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Question mark opens sabias que
     questionBtn.addEventListener('click', () => {
         overlay.style.display = 'block';
-        sabiasPopup.style.display = 'block';
+        questionPopup.style.display = 'block';
     });
 
     // Close functionality
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
             const popup = button.closest('.popup');
-            if (popup.classList.contains('answer-popup')) {
+            if (popup.classList.contains('transport-popup')) {
                 popup.classList.remove('show');
                 setTimeout(() => {
                     popup.style.display = 'none';
@@ -146,8 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
-
 });
 
 
