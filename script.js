@@ -117,18 +117,23 @@ closeButtons.forEach(button => {
     artwork.addEventListener('mouseleave', () => {
         magnifier.style.display = 'none';
     });
-
-    plusIcon.addEventListener('click', () => {
+       questionBtn.addEventListener('click', () => {
         overlay.style.display = 'block';
-        bioPopup.style.display = 'block';
+        questionPopup.style.display = 'block';
     });
 
     overlay.addEventListener('click', () => {
         overlay.style.display = 'none';
-        bioPopup.style.display = 'none';
-        transportPopup.style.display = 'none';
-        dreamPopup.style.display = 'none';
+        questionPopup.style.display = 'none';
     });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            questionPopup.style.display = 'none';
+        });
+    });
+
 
     revealBtn.addEventListener('click', handleReveal);
     
