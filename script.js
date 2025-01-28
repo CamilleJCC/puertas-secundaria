@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Plus icon opens bio
-    plusBtn.addEventListener('click', () => {
+    bioBtn.addEventListener('click', () => {
         overlay.style.display = 'block';
         bioPopup.style.display = 'block';
     });
