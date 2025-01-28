@@ -68,6 +68,10 @@
     position: relative;
     cursor: none;
 }
+#questionPopup {
+    background: #faf7ba;
+    width: 90%;
+}
 
 h1 {
     font-size: clamp(2.5rem, 3.75rem, 45px); /* 45px */
