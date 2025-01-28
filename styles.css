@@ -55,6 +55,7 @@
 
 .semibold {
   font-family: 'InterTight-Semibold';
+    cursor:pointer;
 }
 .semibold:hover{
 text-decoration:underline;
