@@ -251,10 +251,10 @@ background: #b5f0de;
     transition: all 0.3s ease;
 }
 .bio-icon {
-    width: 32px;
-    height: 32px;
+width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background: var(--primary-color);
+    background: #faf7ba;
     border: none;
     cursor: pointer;
     display: flex;
@@ -262,6 +262,10 @@ background: #b5f0de;
     justify-content: center;
     position: relative;
     transition: all 0.3s ease;
+    color: #87bafa;
+    font-family: 'InterTight';
+    font-size: 32px;
+    margin-top: -1.3rem !important;
 }
 
 .plus-icon::before,
