@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const plusBtn = document.getElementById('plusBtn');
     const questionBtn = document.getElementById('questionBtn');
     const bioPopup = document.getElementById('bioPopup');
+    const plusPopup = document.getElementById('tooltipText');
     const questionPopup = document.getElementById('questionPopup');
     const overlay = document.getElementById('overlay');
     const closeButtons = document.querySelectorAll('.close-btn');
@@ -95,6 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Plus icon opens bio
     bioBtn.addEventListener('click', () => {
+        overlay.style.display = 'block';
+        bioPopup.style.display = 'block';
+    });
+      // Plus icon opens bio
+    plusBtn.addEventListener('click', () => {
         overlay.style.display = 'block';
         bioPopup.style.display = 'block';
     });
