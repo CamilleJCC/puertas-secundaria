@@ -146,9 +146,6 @@ li {
     background: #faf7ba;
 }
 
-.tooltip-container:hover .tooltip-text {
-    visibility: visible;
-}
 /* Question Icon Styles */
 .question-icon {
 width: 50px;
