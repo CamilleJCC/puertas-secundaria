@@ -298,13 +298,15 @@ width: 50px;
 
 
 .tooltip-text {
-visibility: hidden;
-    position: relative;
+ position: absolute;
+    visibility: hidden;
+    display: none;
     background: #87bafa;
     border-radius: 100px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: max-content;
-    margin-left: 10px;
+    left: 42px;
+    top: 0;
     z-index: 1000;
     font-size: 1rem;
     padding: 0.6rem 1.3rem;
