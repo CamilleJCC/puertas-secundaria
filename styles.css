@@ -267,6 +267,7 @@ width: 44px;
     font-family: 'InterTight';
     font-size: 26px;
     margin-top: -1.3rem !important;
+    color:white;
 }
 .bio-icon:hover {
     background: var(--gradient-end);
