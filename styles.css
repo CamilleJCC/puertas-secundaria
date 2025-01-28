@@ -459,6 +459,7 @@ padding:20px;
 .popup h2{
  text-transform: uppercase;
  color: var(--primary-color);
+font-size: 1.3rem;
 }
 #questionPopup {
     background:#faf7ba;
