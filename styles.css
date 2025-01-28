@@ -95,10 +95,11 @@ p {
 li {
     text-align: left;
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.5;
     color: var(--secondary-color);
     margin-left: 1.65rem;
     width: 63%;
+    padding-bottom: 23px;
 }
 
 /* Remove marker for dashed list items */
