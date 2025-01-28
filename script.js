@@ -101,8 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
       // Plus icon opens bio
     plusBtn.addEventListener('click', () => {
-        overlay.style.display = 'block';
-        bioPopup.style.display = 'block';
+        tooltipText.style.display = 'block';
     });
 
     // Question mark opens sabias que
