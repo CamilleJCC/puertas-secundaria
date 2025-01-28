@@ -156,7 +156,7 @@ li {
 width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: #faf7ba;
+    background: #87bafa;
     border: none;
     cursor: pointer;
     display: flex;
@@ -199,7 +199,7 @@ width: 44px;
 }
 
 .reveal-btn {
-    background: #c4e0ff;
+    background: #87bafa;
     border: none;
     padding: 0.6rem 1.3rem;
     border-radius: 1.5625rem;
