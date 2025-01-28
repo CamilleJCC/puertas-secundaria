@@ -166,7 +166,7 @@ width: 44px;
     transition: all 0.3s ease;
     color: #87bafa;
     font-family: 'InterTight';
-    font-size: 32px;
+    font-size: 20px;
     margin-top: -1.3rem !important;
 }
 
@@ -265,7 +265,7 @@ width: 44px;
     position: relative;
     transition: all 0.3s ease;
     font-family: 'InterTight';
-    font-size: 26px;
+    font-size: 20px;
     margin-top: -1.3rem !important;
     color:white;
 }
