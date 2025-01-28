@@ -443,13 +443,13 @@ ul.dashed > li:before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background:var(--background-color);
-    padding: 20px;
+    background: var(--background-color);
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     display: none;
-    width: 44%;
+    width: 41%;
     height: fit-content;
 }
 .popup p {
