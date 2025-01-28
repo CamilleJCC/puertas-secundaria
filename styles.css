@@ -372,8 +372,9 @@ ul.dashed > li {
     padding-bottom: 6px;
 }
 ul.dashed > li:before {
-  content: "-";
-  text-indent: -5px;
+  content: "- ";
+    text-indent: 10px;
+    color: #3b82f6;
 }
 
 .overlay {
