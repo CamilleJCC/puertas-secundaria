@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const questionPopup = document.getElementById('questionPopup');
     const overlay = document.getElementById('overlay');
     const closeButtons = document.querySelectorAll('.close-btn');
+    const tooltipText = document.querySelector('.tooltip-text');
 
     function updateZoom(e) {
         const rect = artwork.getBoundingClientRect();
@@ -94,15 +95,16 @@ document.addEventListener('DOMContentLoaded', () => {
         magnifier.style.display = 'none';
     });
 
-    // Plus icon opens bio
+    // Bio icon opens bio
     bioBtn.addEventListener('click', () => {
         overlay.style.display = 'block';
         bioPopup.style.display = 'block';
     });
       // Plus icon opens bio
-    plusBtn.addEventListener('click', () => {
-        tooltipText.style.display = 'block';
-    });
+   plusBtn.addEventListener('click', () => {
+    tooltipText.style.visibility = 'visible';
+    tooltipText.style.display = 'block'; // Add this line
+});
 
     // Question mark opens sabias que
     questionBtn.addEventListener('click', () => {
@@ -135,6 +137,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         overlay.style.display = 'none';
     });
+
+    document.addEventListener('click', (e) => {
+    if (!e.target.matches('#plusBtn') && !e.target.closest('.tooltip-text')) {
+        tooltipText.style.visibility = 'hidden';
+        tooltipText.style.display = 'none';
+    }
+});
 
     revealBtn.addEventListener('click', handleReveal);
     
