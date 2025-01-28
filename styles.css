@@ -110,6 +110,7 @@ li {
 .dashed li {
     margin-left: 0;
     width:100%;
+    padding: 0px 20px;
 }
 
 ::marker {
