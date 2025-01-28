@@ -101,11 +101,15 @@ document.addEventListener('DOMContentLoaded', () => {
         bioPopup.style.display = 'block';
     });
       // Plus icon opens bio
-   plusBtn.addEventListener('click', () => {
-    tooltipText.style.visibility = 'visible';
-    tooltipText.style.display = 'block'; // Add this line
+  plusBtn.addEventListener('click', () => {
+    if (tooltipText.style.visibility === 'visible') {
+        tooltipText.style.visibility = 'hidden';
+        tooltipText.style.display = 'none';
+    } else {
+        tooltipText.style.visibility = 'visible';
+        tooltipText.style.display = 'block';
+    }
 });
-
     // Question mark opens sabias que
     questionBtn.addEventListener('click', () => {
         overlay.style.display = 'block';
