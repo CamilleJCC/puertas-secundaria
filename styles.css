@@ -473,7 +473,7 @@ padding:0px;
 font-size: 1.3rem;
 }
 #questionPopup {
-    background:#faf7ba;
+    background:var(--background-color);
     width:35%;
 }
 
