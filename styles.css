@@ -149,8 +149,8 @@ li {
 
 /* Question Icon Styles */
 .question-icon {
-width: 32px;
-    height: 32px;
+width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: #faf7ba;
     border: none;
@@ -249,8 +249,8 @@ background: #b5f0de;
     transition: all 0.3s ease;
 }
 .bio-icon {
-width: 32px;
-    height: 32px;
+width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: #c4e0ff;
     border: none;
@@ -263,6 +263,9 @@ width: 32px;
     font-family: 'InterTight';
     font-size: 26px;
     margin-top: -1.3rem !important;
+}
+.bio-icon:hover {
+    background: var(--gradient-end);
 }
 
 .plus-icon::before,
