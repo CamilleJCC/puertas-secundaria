@@ -455,7 +455,7 @@ ul.dashed > li:before {
     height: fit-content;
 }
 .popup p {
-padding:20px;
+padding:0px;
 }
 
 .popup h2{
