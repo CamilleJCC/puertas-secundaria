@@ -56,7 +56,10 @@
 .semibold {
   font-family: 'InterTight-Semibold';
 }
-
+.semibold:hover{
+text-decoration:underline;
+    color:#87bafa;
+}
 .italic {
   font-family: 'InterTight-Italic';
 }
