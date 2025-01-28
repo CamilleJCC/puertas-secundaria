@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('overlay');
     const closeButtons = document.querySelectorAll('.close-btn');
     const tooltipText = document.querySelector('.tooltip-text');
+    const artistName = document.querySelector('.semibold');
 
     function updateZoom(e) {
         const rect = artwork.getBoundingClientRect();
@@ -116,6 +117,10 @@ document.addEventListener('DOMContentLoaded', () => {
         questionPopup.style.display = 'block';
     });
 
+    artistName.addEventListener('click', () => {
+    overlay.style.display = 'block';
+    bioPopup.style.display = 'block';
+});
     // Close functionality
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
