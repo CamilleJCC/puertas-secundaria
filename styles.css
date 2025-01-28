@@ -250,6 +250,19 @@ background: #b5f0de;
     position: relative;
     transition: all 0.3s ease;
 }
+.bio-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
 
 .plus-icon::before,
 .plus-icon::after {
